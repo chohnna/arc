@@ -16,6 +16,7 @@ from subprocess import Popen, PIPE, STDOUT
 from glob import glob
 
 base_path='/Users/hannacho/Desktop/arc/arc-prize-2024/'
+# Data Loading & Preprocessing: 
 # Loading JSON data
 def load_json(file_path):
     with open(file_path) as f:
@@ -136,3 +137,18 @@ for i in range(0,20):
     task=training_challenges[t]
     task_solution = training_solutions[t][0]
     plot_task(task,  task_solution, i, t)
+
+
+
+
+# Model Building & Training
+    
+# Model Evaluation
+
+# Creat submission.json: must include 2 predictions (attempt_1, attempt_2);
+#  {"00576224": [{"attempt_1": [[0, 0], [0, 0]], "attempt_2": [[0, 0], [0, 0]]}],
+#   "009d5c81": [{"attempt_1": [[0, 0], [0, 0]], "attempt_2": [[0, 0], [0, 0]]}],
+#   "12997ef3": [{"attempt_1": [[0, 0], [0, 0]], "attempt_2": [[0, 0], [0, 0]]},
+#               {"attempt_1": [[0, 0], [0, 0]], "attempt_2": [[0, 0], [0, 0]]}],
+#  ...
+# }
